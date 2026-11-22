@@ -1,0 +1,10 @@
+{
+  "name": "steady-fitness",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test workout.test.cjs app.test.cjs activities.test.cjs"
+  },
+  "description": "Personal fitness tracker with guided kettlebell sessions and a shared activity history."
+}

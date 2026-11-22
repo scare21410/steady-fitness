@@ -1,0 +1,339 @@
+{
+  "version": 1,
+  "title": "Steady Fitness / Beginner kettlebell",
+  "defaults": {
+    "minutes": 40,
+    "rounds": 2,
+    "level": "easy"
+  },
+  "sessions": [
+    {
+      "minutes": 40,
+      "rounds": 2
+    },
+    {
+      "minutes": 50,
+      "rounds": 4
+    },
+    {
+      "minutes": 60,
+      "rounds": 4
+    }
+  ],
+  "roundOptions": [
+    2,
+    3,
+    4
+  ],
+  "countdownSeconds": 10,
+  "minuteSeconds": 60,
+  "holdSwitchSeconds": 5,
+  "minimumRestSeconds": 20,
+  "moves": [
+    {
+      "id": "deadlift",
+      "name": "Kettlebell deadlift",
+      "short": "Deadlift",
+      "reps": "Start with 4 controlled reps",
+      "crop": [
+        10,
+        328
+      ],
+      "cues": [
+        "Send your hips back. Keep your back in its natural position.",
+        "Stand tall through your whole feet. Don’t lean back."
+      ],
+      "notes": "Bell between your feet. Soften your knees, hinge at the hips, and grip with both hands. Keep arms long. Stand smoothly, then hinge to lower. If you cannot reach the floor comfortably, practise an unloaded hinge.",
+      "source": "assets/exercises.png"
+    },
+    {
+      "id": "squat",
+      "name": "Goblet squat",
+      "short": "Goblet squat",
+      "reps": "Start with 3 reps · Bodyweight is welcome",
+      "crop": [
+        340,
+        315
+      ],
+      "cues": [
+        "Start with bodyweight if 12 kg feels heavy.",
+        "Keep heels down. Use a comfortable depth."
+      ],
+      "notes": "Hold the bell close to your chest with both hands. Bend hips and knees, keeping knees aligned with toes. Stand smoothly. First learn an unloaded sit-to-stand from a stable chair against a wall. Only add the bell when you can position and hold it comfortably.",
+      "source": "assets/exercises.png"
+    },
+    {
+      "id": "row",
+      "name": "Supported row",
+      "short": "Supported row",
+      "reps": "Start with 4 reps per arm",
+      "crop": [
+        660,
+        288
+      ],
+      "cues": [
+        "Brace your free hand on a sturdy bench or counter.",
+        "Pull your elbow toward your hip. Keep your torso still."
+      ],
+      "notes": "Use a staggered stance and hinge at the hips. Support your free hand on a sturdy surface. Start with the bell hanging below your shoulder. Pull toward your lower ribs and lower slowly. Do not twist or shrug; use a lighter weight if needed.",
+      "source": "assets/exercises.png"
+    },
+    {
+      "id": "pushup",
+      "name": "Wall push-up",
+      "short": "Wall push-up",
+      "reps": "Start with 4 controlled reps",
+      "crop": [
+        953,
+        282
+      ],
+      "cues": [
+        "Keep a straight line from head to heels.",
+        "Feet closer to the wall makes it easier."
+      ],
+      "notes": "Hands on the wall at chest height, slightly wider than shoulders. Step back and bend elbows about 30–45 degrees from your sides. Bring your chest toward the wall, then push away. Keep breathing.",
+      "source": "assets/exercises.png"
+    },
+    {
+      "id": "hold",
+      "name": "Suitcase hold",
+      "short": "Suitcase hold",
+      "reps": "Start with 10 seconds each side",
+      "crop": [
+        1241,
+        284
+      ],
+      "cues": [
+        "Stand tall, shoulders level. Don’t lean sideways.",
+        "Breathe normally. Set the bell down before switching."
+      ],
+      "notes": "Pick up the bell with a hip hinge and hold it beside one thigh. Keep shoulders level and arm straight. Start with 10–15 seconds per hand. Set it down before changing hands. Stop early if grip or posture fades.",
+      "source": "assets/exercises.png"
+    }
+  ],
+  "warmupMoves": [
+    {
+      "id": "march",
+      "name": "Easy march",
+      "short": "Easy march",
+      "reps": "2 minutes · Easy rhythm",
+      "crop": [
+        0,
+        384
+      ],
+      "source": "assets/warmup.png",
+      "cues": [
+        "Lift one foot at a time, keeping the steps gentle.",
+        "Let your arms swing naturally and keep breathing."
+      ],
+      "notes": "March gently in place or walk around your space. Lift your feet only as high as is comfortable. No kettlebell needed.",
+      "frame": [
+        100,
+        0,
+        424,
+        384
+      ]
+    },
+    {
+      "id": "hinge",
+      "name": "Unloaded hip hinge",
+      "short": "Unloaded hip hinge",
+      "reps": "2 minutes · No weight",
+      "crop": [
+        384,
+        384
+      ],
+      "source": "assets/warmup.png",
+      "cues": [
+        "Soften your knees and send your hips back.",
+        "Keep your back in its natural position. Stand smoothly."
+      ],
+      "notes": "Stand with feet about hip-width apart and arms crossed over your chest. Soften your knees, then send your hips back while your torso tips forward. Keep your back in its natural position. Stand smoothly and pause between a few repetitions. No weight needed."
+    },
+    {
+      "id": "chair",
+      "name": "Chair sit-to-stand",
+      "short": "Chair sit-to-stand",
+      "reps": "2 minutes · Bodyweight",
+      "crop": [
+        768,
+        384
+      ],
+      "source": "assets/warmup.png",
+      "cues": [
+        "Use a stable chair against a wall. Keep feet flat.",
+        "Lean forward gently and stand through your whole feet."
+      ],
+      "notes": "Place a sturdy chair against a wall. Sit near the front of the seat with your feet flat under your knees. Reach your empty hands forward, lean forward gently, and stand. Sit back down with control. Use a comfortable range and pause as needed. No kettlebell."
+    },
+    {
+      "id": "shoulders",
+      "name": "Shoulder rolls",
+      "short": "Shoulder rolls",
+      "reps": "30 seconds · Gentle circles",
+      "crop": [
+        1152,
+        384
+      ],
+      "source": "assets/warmup.png",
+      "cues": [
+        "Let your arms hang comfortably at your sides.",
+        "Circle your shoulders gently. Keep the movement small."
+      ],
+      "notes": "Stand comfortably with your arms relaxed. Gently roll your shoulders up, back, down, and forward in small comfortable circles. Keep breathing; avoid forcing a range or shrugging hard."
+    }
+  ],
+  "levels": [
+    {
+      "id": "easy",
+      "label": "Start easy",
+      "deadlift": 4,
+      "squat": 3,
+      "row": 4,
+      "pushup": 4,
+      "hold": 10
+    },
+    {
+      "id": "build",
+      "label": "Build up",
+      "deadlift": 6,
+      "squat": 5,
+      "row": 6,
+      "pushup": 6,
+      "hold": 12
+    },
+    {
+      "id": "steady",
+      "label": "Steady",
+      "deadlift": 8,
+      "squat": 6,
+      "row": 8,
+      "pushup": 8,
+      "hold": 15
+    }
+  ],
+  "warmup": [
+    {
+      "duration": 120,
+      "name": "Easy march",
+      "detail": "2 minutes · Find an easy rhythm",
+      "cues": [
+        "March gently or walk around your space.",
+        "Let your breathing settle into a comfortable rhythm."
+      ],
+      "move": "march",
+      "visual": null
+    },
+    {
+      "duration": 120,
+      "name": "Practise your hip hinge",
+      "detail": "No weight · Slow, comfortable repetitions",
+      "cues": [
+        "Soften your knees and send your hips back.",
+        "Stand up smoothly. Pause between a few practice reps."
+      ],
+      "move": "hinge",
+      "visual": null
+    },
+    {
+      "duration": 120,
+      "name": "Chair sit-to-stand",
+      "detail": "Bodyweight · A stable chair against a wall",
+      "cues": [
+        "Sit down gently, then stand through your whole feet.",
+        "Use a comfortable range and take pauses as needed."
+      ],
+      "move": "chair",
+      "visual": null
+    },
+    {
+      "duration": 30,
+      "name": "Shoulder rolls",
+      "detail": "30 seconds · Gentle, comfortable circles",
+      "cues": [
+        "Let your arms hang comfortably at your sides.",
+        "Circle your shoulders gently. Keep the movement small."
+      ],
+      "move": "shoulders",
+      "visual": null
+    },
+    {
+      "duration": 30,
+      "name": "Easy wall push-ups",
+      "detail": "A few gentle reps · No rush",
+      "cues": [
+        "Keep a straight line from head to heels.",
+        "Feet closer to the wall makes it easier."
+      ],
+      "move": "pushup",
+      "visual": null
+    },
+    {
+      "duration": 60,
+      "name": "Practise your deadlift",
+      "detail": "A few easy reps · Rest between attempts",
+      "cues": [
+        "Send your hips back. Keep your back in its natural position.",
+        "Stand tall through your whole feet. Don’t lean back."
+      ],
+      "move": "deadlift",
+      "visual": null
+    }
+  ],
+  "strengthOrder": [
+    {
+      "move": "deadlift"
+    },
+    {
+      "move": "squat"
+    },
+    {
+      "move": "row",
+      "side": "Left"
+    },
+    {
+      "move": "row",
+      "side": "Right"
+    },
+    {
+      "move": "pushup"
+    },
+    {
+      "move": "hold",
+      "type": "hold"
+    }
+  ],
+  "walking": {
+    "name": "Walk at your pace",
+    "detail": "Walk or march · You should be able to speak in full sentences",
+    "cues": [
+      "Leave the kettlebell down. Walk or march without weights.",
+      "Keep a comfortable pace; slow down whenever you need."
+    ],
+    "visual": "walk"
+  },
+  "cooldown": [
+    {
+      "duration": 180,
+      "name": "Slow things down",
+      "detail": "3 minutes · Gradually ease your pace",
+      "cues": [
+        "Walk slowly and let your breathing settle.",
+        "Relax your shoulders. You’ve done the work."
+      ],
+      "move": null,
+      "visual": "walk"
+    },
+    {
+      "duration": 120,
+      "name": "Gentle stretch & breathe",
+      "detail": "2 minutes · Calves, hips, and chest",
+      "cues": [
+        "Choose comfortable stretches. No bouncing or forcing.",
+        "Breathe normally and finish feeling settled."
+      ],
+      "move": null,
+      "visual": "breathe"
+    }
+  ]
+}
