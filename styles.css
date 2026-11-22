@@ -10,3 +10,106 @@
 .guide-section{margin:30px 0 15px;font-size:21px;color:var(--blue)}
 
 .rep-setting{margin-top:15px}.reps-done{margin-top:14px;font-size:15px;border-color:var(--blue);color:var(--blue)}
+
+/* Playback uses the available viewport; setup and history remain normal pages. */
+.body-playing{height:100vh;height:100dvh;display:flex;flex-direction:column}
+.body-playing .masthead{flex:none;width:100%;padding-top:10px;padding-bottom:10px}
+.body-playing main{flex:1;min-height:0;display:flex;flex-direction:column}
+.body-playing .player{flex:1;min-height:0;width:100%;margin:0 auto;display:flex;flex-direction:column;padding-top:6px;padding-bottom:max(12px,env(safe-area-inset-bottom))}
+.body-playing .overall{flex:none;position:static;padding:0}
+.body-playing .workout-stage{flex:1;min-height:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:clamp(10px,2vh,28px) 0;gap:4%}
+.body-playing .stage-copy{min-width:0}
+.body-playing .visual-panel{min-height:0;max-height:100%;display:flex;flex-direction:column}
+.body-playing .exercise-picture{flex:1;min-height:0;overflow:hidden}
+.body-playing .exercise-picture svg{width:100%;height:100%;min-height:0;max-height:36vh;object-fit:contain}
+.body-playing .exercise-cues{flex:none;padding:clamp(10px,2vh,24px) 20px;font-size:clamp(14px,1.7vh,21px)}
+.body-playing .stage-status{margin-bottom:10px}
+.body-playing .stage-copy h1{font-size:clamp(26px,min(3.7vw,5vh),64px)}
+.body-playing .rep-target{margin-bottom:10px}
+.body-playing .exercise-timer{font-size:clamp(56px,min(8.5vw,15vh),148px)}
+.body-playing .player-bottom{flex:none;flex-wrap:nowrap;padding-top:12px}
+.body-playing .control-hint{flex:none;margin-top:10px}
+@media(max-width:700px) and (orientation:portrait){
+ .body-playing .masthead{padding-top:6px;padding-bottom:6px}
+ .body-playing .overall-label{margin-bottom:6px;font-size:12px}
+ .body-playing .overall-label strong{font-size:12px}
+ .body-playing .whole-progress{height:16px}
+ .body-playing .phase-labels{margin-top:5px}
+ .body-playing .phase-labels span{overflow:hidden}
+ .body-playing .workout-stage{gap:10px;padding:10px 0;align-items:stretch}
+ .body-playing .stage-copy{flex:none}
+ .body-playing .stage-status{font-size:12px;margin-bottom:6px}
+ .body-playing .category,.body-playing .paused-badge{padding:4px 8px}
+ .body-playing .stage-copy h1{font-size:clamp(23px,3.8vh,37px);margin-bottom:5px}
+ .body-playing .rep-target{font-size:14px;margin-bottom:4px;line-height:1.3}
+ .body-playing .exercise-timer{font-size:clamp(48px,9vh,80px);letter-spacing:-3px}
+ .body-playing #timer-caption{font-size:13px}
+ .body-playing .interval-track{margin:6px 0}
+ .body-playing .timer-guidance{font-size:12px;line-height:1.3}
+ .body-playing .reps-done{margin-top:5px;min-height:44px;padding:8px 12px;font-size:14px}
+ .body-playing .visual-panel{flex:1;min-height:0}
+ .body-playing .exercise-picture svg{max-height:none}
+ .body-playing .abstract-visual{padding:8px}
+ .body-playing .abstract-visual .movement{font-size:28px}
+ .body-playing .abstract-visual p{font-size:12px;margin-top:5px}
+ .body-playing .step-symbol{height:40px}
+ .body-playing .step-symbol span{height:30px}
+ .body-playing .exercise-cues{padding:8px 12px;font-size:12px;line-height:1.3}
+ .body-playing .exercise-cues p+p{margin-top:4px}
+ .body-playing .player-bottom{flex-wrap:wrap;gap:7px;padding-top:7px}
+ .body-playing .next-up{max-width:72%;gap:1px}
+ .body-playing .next-up strong{font-size:14px}
+ .body-playing .next-up span,.body-playing .next-up small{font-size:11px}
+ .body-playing .transport button{min-height:44px;padding:8px}
+}
+@media(max-height:500px) and (orientation:landscape){
+ .body-playing .masthead{padding-top:4px;padding-bottom:4px}
+ .body-playing .brand{font-size:24px}
+ .body-playing .quiet{min-height:36px;padding:6px 12px}
+ .body-playing .overall-label{margin-bottom:4px;font-size:12px}
+ .body-playing .whole-progress{height:12px}
+ .body-playing .phase-labels{margin-top:3px;font-size:10px}
+ .body-playing .workout-stage{display:grid;padding:6px 0;gap:3%;align-items:center}
+ .body-playing .stage-status{font-size:11px;margin-bottom:3px;gap:6px}
+ .body-playing .category,.body-playing .paused-badge{padding:3px 6px}
+ .body-playing .stage-copy h1{font-size:23px;margin-bottom:4px;letter-spacing:-.7px}
+ .body-playing .rep-target{font-size:12px;margin-bottom:2px}
+ .body-playing .exercise-timer{font-size:48px;letter-spacing:-2px}
+ .body-playing #timer-caption{font-size:12px}
+ .body-playing .interval-track{margin:4px 0}
+ .body-playing .timer-guidance{font-size:10px;line-height:1.25}
+ .body-playing .reps-done{margin-top:3px;min-height:36px;padding:5px 10px;font-size:12px}
+ .body-playing .exercise-cues{font-size:11px;line-height:1.3;padding:6px 10px}
+ .body-playing .exercise-cues p+p{margin-top:3px}
+ .body-playing .abstract-visual{padding:8px}
+ .body-playing .abstract-visual .movement{font-size:24px}
+ .body-playing .abstract-visual p{font-size:12px}
+ .body-playing .player-bottom{gap:10px;padding-top:6px}
+ .body-playing .next-up{order:0;max-width:30%}
+ .body-playing .next-up strong{font-size:13px}
+ .body-playing .next-up span,.body-playing .next-up small{font-size:10px}
+ .body-playing .transport{order:0;width:auto;gap:6px}
+ .body-playing .transport button{min-height:38px;min-width:0;font-size:13px;padding:6px 12px}
+ .body-playing .end-button{order:0;font-size:11px}
+ .body-playing .control-hint{display:none}
+}
+@media(max-width:700px) and (max-height:650px) and (orientation:portrait){
+ .body-playing .masthead{padding-top:4px;padding-bottom:4px}
+ .body-playing .brand{font-size:24px}
+ .body-playing .brand svg{width:22px}
+ .body-playing .quiet{min-height:36px;padding:5px 8px;font-size:11px}
+ .body-playing .workout-stage{gap:6px;padding:6px 0}
+ .body-playing .stage-status{margin-bottom:3px;font-size:11px}
+ .body-playing .stage-copy h1{font-size:23px;margin-bottom:3px}
+ .body-playing .rep-target{font-size:12px;margin-bottom:2px}
+ .body-playing .exercise-timer{font-size:44px}
+ .body-playing .timer-guidance{font-size:11px;line-height:1.2}
+ .body-playing .exercise-cues{font-size:11px;padding:6px 9px}
+ .body-playing .next-up{max-width:calc(100% - 90px)}
+ .body-playing .end-button{max-width:none;white-space:nowrap}
+}
+.instructions-button{display:none}
+@media(max-width:700px), (max-height:500px) and (orientation:landscape){
+ .body-playing .exercise-cues,.body-playing .timer-guidance{display:none}
+ .body-playing .instructions-button{display:block;flex:none;border-radius:0;border-width:1px 0 0;min-height:44px;padding:8px 12px;font-size:14px}
+}

@@ -1,8 +1,12 @@
 # Steady Fitness
 
-A standalone personal fitness tracker for TV, phone, and computer. Guided kettlebell training is the first activity; gym visits are planned as a later feature. No install, external fonts, framework, account, or internet connection is needed. Requires Node.js on the serving Mac.
+A standalone personal fitness tracker for TV, phone, and computer. Guided kettlebell training is the first activity; gym visits are planned as a later feature. No install, external fonts, framework, or account is needed to use the tracker. The hosted version needs an internet connection; the LAN version requires Node.js on the serving Mac.
 
-## Run
+## Hosted app
+
+Open https://scare21410.github.io/steady-fitness/ for the HTTPS version. GitHub Actions runs the tests and publishes only the allowlisted website assets when `main` changes. The repository is public; workout history and preferences remain in each browser. History from localhost, LAN, or ngrok addresses stays at those origins and is not automatically transferred.
+
+## Run locally
 
 From this directory:
 

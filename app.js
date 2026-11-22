@@ -43,6 +43,23 @@ $('pause').addEventListener('click',function(){running?pause():resume()});$('pre
 $('finish').addEventListener('click',function(){pause();$('exit-dialog').showModal();$('keep-going').focus()});$('keep-going').addEventListener('click',function(){$('exit-dialog').close();resume();$('pause').focus()});$('end-confirm').addEventListener('click',function(){$('exit-dialog').close();finishSession(true)});$('exit-dialog').addEventListener('cancel',function(){setTimeout(function(){$('pause').focus()},0)});
 $('again').addEventListener('click',function(){mode='setup';show('setup');updateSetup();$('start').focus()});$('sound').addEventListener('click',function(){sound=!sound;initAudio();updateSound();settings();if(sound)beep(true)});
 $('fullscreen').addEventListener('click',function(){if(document.fullscreenElement){document.exitFullscreen().catch(function(){})}else if(document.documentElement.requestFullscreen){document.documentElement.requestFullscreen().catch(function(){$('fullscreen').textContent='Full screen unavailable'})}else{$('fullscreen').textContent='Use browser full screen'}});document.addEventListener('fullscreenchange',function(){$('fullscreen').textContent=document.fullscreenElement?'Exit full screen':'Full screen'});
+var resumeAfterInstructions=false;
+$('instructions-open').addEventListener('click',function(){resumeAfterInstructions=running;pause();$('instructions-title').textContent=$('exercise-name').textContent;$('instructions-cues').innerHTML=$('exercise-cues').innerHTML;$('instructions-guidance').textContent=$('timer-guidance').textContent;$('instructions-dialog').showModal();$('instructions-close').focus()});
+$('instructions-close').addEventListener('click',function(){$('instructions-dialog').close()});
+$('instructions-dialog').addEventListener('close',function(){if(resumeAfterInstructions)resume();$('instructions-open').focus({preventScroll:true})});
+$('wake-check').addEventListener('click',async function(){
+ $('wake-dialog').showModal();$('wake-close').focus();
+ var secure=window.isSecureContext===true,supported=!!(navigator.wakeLock&&navigator.wakeLock.request);
+ var policy=document.permissionsPolicy||document.featurePolicy;var policyState='unknown';try{if(policy&&policy.allowsFeature)policyState=policy.allowsFeature('screen-wake-lock')?'allowed':'blocked'}catch(e){}
+ $('wake-details').textContent='Secure connection: '+(secure?'yes':'no')+'. Wake lock API exposed: '+(supported?'yes':'no')+'. Page visibility: '+document.visibilityState+'. Permissions policy: '+policyState+'.';
+ if(!secure){$('wake-result').textContent='This address cannot request a screen wake lock. Open the tracker over trusted HTTPS to check whether this TV browser supports it. An API missing over HTTP does not prove the browser lacks support.';return}
+ if(!supported){$('wake-result').textContent='This browser does not expose screen wake lock, even on a secure connection. HTTPS alone will not prevent its screensaver.';return}
+ $('wake-result').textContent='Testing screen wake lock…';
+ try{var testLock=await navigator.wakeLock.request('screen');await testLock.release();$('wake-result').textContent='Screen wake lock was granted. The tracker will request it during workouts. Confirm on the TV by leaving a workout running beyond five minutes; the TV may still enforce its own screensaver policy.'}
+ catch(error){$('wake-result').textContent='The browser exposes wake lock, but the request failed ('+(error.name||'unknown error')+'). '+(error.message||'No further reason supplied by the browser.')+' This browser has not confirmed it can keep the screen awake.'}
+});
+$('wake-close').addEventListener('click',function(){$('wake-dialog').close()});
+$('wake-dialog').addEventListener('close',function(){$('wake-check').focus()});
 $('guide-open').addEventListener('click',function(){$('guide').showModal();$('guide-close').focus()});$('guide-close').addEventListener('click',function(){$('guide').close();$('guide-open').focus()});
 document.querySelector('.brand').addEventListener('click',function(e){if(mode==='workout'||mode==='ready'){e.preventDefault();pause();$('exit-dialog').showModal();$('keep-going').focus()}});
 document.addEventListener('visibilitychange',function(){if(document.hidden&&running)pause()});
